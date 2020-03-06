@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
     
-    <link rel="shortcut icon" type="image/png" href=""> 
+    <link rel="shortcut icon" type="image/png" href="favicon.png"> 
     <title>SquareSpace | Notification Email</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
 
     <style type="text/css">
@@ -76,6 +76,24 @@
         .footer{ color: #A4ACAC;}
         
         /* MEDIA QUERIES START*/
+        @media only screen and (max-device-width: 575px) {
+            .featContainer{grid-template-columns: 1fr 1fr !important; grid-template-rows: 1fr 1fr !important;}
+            .feat1, .feat2{padding-bottom: 20px !important;}
+        }
+
+        @media only screen and (max-device-width: 575px) {
+            .logoWrapper{grid-template-columns: 1fr !important; grid-template-rows: 92px 50px !important;}
+            .logoContainer{text-align:center !important; padding-bottom:10px !important; padding-left: 0 !important;padding-right: 10px !important; }
+            .accountInfo{text-align:center !important; padding-top:0px !important; padding-bottom:15px !important; padding-left: 0 !important;padding-right: 0 !important; margin:0 !important;}
+            .accountInfo a{text-align:center !important; margin:0 !important;}
+
+        }
+
+        @media only screen and (max-device-width: 500px) {
+            td[id=bodyMain]{padding-left: 30px !important; padding-right: 30px !important;}
+        }
+
+
         /* MEDIA QUERIES END*/
     /* <!-- CUSTOM STYLES END --> */
     </style>
@@ -95,17 +113,26 @@
                     <td valign="top" bgcolor="#F4F4F4">
                         <table align="center" border="0" bgcolor="#F4F4F4" cellspacing="0" cellpadding="0" width="100%" role="presentation" style="min-width: 100%; margin: 0 auto; padding: 0;">
                             <tr>
-                                <td valign="middle" align="left" bgcolor="#F4F4F4" style=" padding: 40px 50px 30px 60px">
-                                    <a href="#" ><img src="squarespace-logo.png" width="170"></a>
+
+
+                                <td align="center" style="padding-top: 0px; margin: 0;">
+                                    <div class="logoWrapper" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr;">
+                                        <div valign="middle" align="left" bgcolor="#F4F4F4" style=" padding: 40px 50px 30px 60px" class="logoContainer">
+                                            <a href="#" ><img src="squarespace-logo.png" width="170" class="logo"></a>
+                                        </div>
+                                        <div valign="top" align="right" bgcolor="#F4F4F4" style="padding: 40px 60px 30px 60px;" class="accountInfo">
+                                            <a href="#" align="right" style="font-size: 9px; letter-spacing: 3px;">ACCOUNT INFORMATION</a>
+                                        </div>
+                                    </div>
                                 </td>
-                                <td valign="top" align="right" bgcolor="#F4F4F4" style="padding: 40px 60px 30px 60px">
-                                    <a href="#" align="right" style="font-size: 9px; letter-spacing: 3px;">ACCOUNT INFORMATION</a>
-                                </td>
+
+                                
+                                
                             </tr>
                         </table>
                         <table align="center" border="0" bgcolor="#F4F4F4" cellspacing="0" cellpadding="0" width="100%" role="presentation" style="min-width: 100%; margin: 0 auto; padding: 0;">
                             <tr>
-                                <td valign="top" style="padding: 0px 60px">
+                                <td valign="top" style="padding: 0px 60px" id="bodyMain">
                                     <table align="center" border="0" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" width="100%" role="presentation" style="min-width: 100%; margin: 0 auto; padding: 0; border: 1px solid #dddddd;">
                                         <tr>
                                             <td valign="top" style=" padding: 45px 50px 25px 50px">
